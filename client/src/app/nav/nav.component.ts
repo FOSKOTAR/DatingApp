@@ -23,11 +23,8 @@ export class NavComponent implements OnInit {
     this.accountService.login(this.model).subscribe(response => {
       //Para moverse por la pagina, al iniciar sesion nos lleva a members
       this.router.navigateByUrl('/members');
-    }, error => {
-      console.log(error);
-      //Mensaje en pantalla (se utiliza "error.error" para mostrar el string)
-      this.toastr.error(error.error);
-    })
+    }
+    )
   }
 
   logout() {
