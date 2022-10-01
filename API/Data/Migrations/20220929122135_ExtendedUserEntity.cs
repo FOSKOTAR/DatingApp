@@ -22,7 +22,7 @@ namespace API.Data.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
-                name: "Creater",
+                name: "Created",
                 table: "Users",
                 type: "TEXT",
                 nullable: false,
@@ -114,7 +114,7 @@ namespace API.Data.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "Creater",
+                name: "Created",
                 table: "Users");
 
             migrationBuilder.DropColumn(
