@@ -30,9 +30,11 @@ export class ErrorInterceptor implements HttpInterceptor {
                 }
                 //Para utilizar el flat() hay que tocar el tsconfic.json y añadir "es2019" en lib[]
                 throw modalStateErrors.flat()
-              } else{
+              } else if (typeof(error.error) === 'object'){
                 error.statusText = 'Bad Request';
                 this.toastr.error(error.statusText, error.status);
+              } else {
+                this.toastr.error(error.error, error.status);
               }
               break;
             case 401:
