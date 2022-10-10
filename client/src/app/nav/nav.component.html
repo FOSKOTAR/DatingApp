@@ -20,7 +20,7 @@
 
         <div class="dropdown align-items-center" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
             <img src="{{user.photoUrl || './assets/user.png'}}" alt="{{user.username}}">
-            <a class="dropdown-toggle text-light ms-2" dropdownToggle>Welcome {{user.knownAs | titlecase}}</a>
+            <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.knownAs | titlecase}}</a>
             <div class="dropdown-menu mt-3" *dropdownMenu>
                 <a class="dropdown-item" routerLink="/member/edit">Edit Profile</a>
                 <div class="divider dropdown-divider"></div>
@@ -33,13 +33,13 @@
             <input 
                 name="username"
                 [(ngModel)]="model.username"
-                class="form-control me-md-2" 
+                class="form-control mr-2" 
                 type="text" 
                 placeholder="Username">
             <input 
                 name="password"
                 [(ngModel)]="model.password"
-                class="form-control me-md-2" 
+                class="form-control mr-2" 
                 type="password" 
                 placeholder="Password">
             <button class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
