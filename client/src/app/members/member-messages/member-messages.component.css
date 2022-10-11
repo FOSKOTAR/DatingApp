@@ -20,6 +20,7 @@
   }
 
     .card-body {
-    overflow-y: scroll;
+    overflow-y: auto;
+    scrollbar-width: 0px;
     height: 400px;
   }
