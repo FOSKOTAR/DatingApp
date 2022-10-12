@@ -7,6 +7,10 @@
             <div class="mb-2" *ngIf="(presence.onlineUsers$ | async).includes(member.username)">
                 <i class="fa fa-user-circle text-success"></i> Online now
             </div>
+            <div>
+                <strong>Name:</strong>
+                <p>{{member.knownAs}}</p>
+            </div>
               <div>
                   <strong>Location:</strong>
                   <p>{{member.city}}, {{member.country}}</p>
